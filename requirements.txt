@@ -1,0 +1,24 @@
+# pip install -r requirements.txt
+
+# This file is used to install the required packages for the project.
+torch>=1.7.0    
+torchvision>=0.8.0
+Pillow>=8.0.0
+numpy>=1.19.0
+streamlit
+
+
+
+
+
+# LINUX
+"""
+# 创建虚拟环境
+python -m venv venv
+
+# 激活虚拟环境
+# source venv/bin/activate
+
+# 安装依赖
+pip install -r requirements.txt
+"""
