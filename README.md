@@ -1,42 +1,32 @@
-"""
-       A: 艺术风格，          B: 现实风格
-       
-文件目录结构
+# 图像风格转换项目使用指南
 
-root--|--- data              # 项目训练数据集  ，无需关注
-      |
-      |--- runs              # 训练结果 ，无需关注
-      |
-      |--- utils             # 空， 无需关注
-      |
-      |--- model -|--- 1000  # 训练一千轮的权重
-      |           |--- 2000  # 训练两千轮的权重
-      |           |--- 3000  # 训练三千轮的权重
-      |           |--- 其他是训练4000轮的权重
-      |
-      |         # 模型权重保存点 
-      |
-      |--- test_img_A        # A类风格测试集图像
-      |
-      |--- test_img_B        # B类风格测试集图像
-      |
-      |--- data_read.py      # 数据读取文件, 无需关注
-      |
-      |--- Net_build.py      # 模型搭建文件, 无需关注
-      |
-      |--- train.py          # 训练文件 ，无需关注
-      |
-      |--- transformer.py    # 加载保存好的模型权重，图像风格转换文件, 保存路径为output
-      |
-      |--- requirements.txt  # 项目依赖库
-      |
-      |--- output-|--- A2B   # A -> B
-      |           |--- B2A   # B -> A
+## 项目结构
+```plaintext
+root/
+├── data/                 # 训练数据集（无需关注）
+├── runs/                 # 训练结果（无需关注）
+├── utils/                # 空目录（无需关注）
+├── model/
+│   ├── 1000/            # 1000轮训练权重
+│   ├── 2000/            # 2000轮训练权重
+│   ├── 3000/            # 3000轮训练权重
+│   └── 其他权重/         # 4000轮训练权重
+├── test_img_A/           # A类风格测试图像
+├── test_img_B/           # B类风格测试图像
+├── data_read.py          # 数据读取模块
+├── Net_build.py          # 模型构建模块
+├── train.py              # 训练模块
+├── transformer.py        # 图像风格转换模块（输出到output目录）
+├── requirements.txt      # 依赖库列表
+└── output/
+    ├── A2B/              # A→B风格转换结果
+    └── B2A/              # B→A风格转换结果
 
-"""
+## 快速开始
 
-
-Run
+### 环境安装
+```bash
 pip install -r requirements.txt
 
-streamlit run app.py 
+```bash
+streamlit run app.py
